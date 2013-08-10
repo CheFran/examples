@@ -19,6 +19,10 @@ class DataServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('kirk-bushell/data');
+
+		App::singleton( 'PostsRepository', function() {
+			return new KirkBushell\Data\Repositories\PostRepository;
+		});
 	}
 
 	/**

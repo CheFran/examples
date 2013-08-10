@@ -19,6 +19,8 @@ class ApiServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('kirk-bushell/api');
+
+		require 'routes.php';
 	}
 
 	/**
